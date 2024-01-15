@@ -3,10 +3,10 @@ from pathlib import Path
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-link = "https://suninjuly.github.io/file_input.html"
+link = 'https://suninjuly.github.io/file_input.html'
 
 file = list(Path.cwd().glob('*.txt'))[0].resolve()
-print(file)
+
 with webdriver.Chrome() as browser:
     browser.get(link)
 
