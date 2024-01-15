@@ -1,8 +1,6 @@
 import math
-import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
 
 # CHROME_USER_CONFIG = '/home/altron/.config/google-chrome/'
 
@@ -31,7 +29,7 @@ with webdriver.Chrome() as browser:
     browser.find_element(By.CSS_SELECTOR, '.btn-primary.btn').click()
     # Принятие alert'а
     browser.switch_to.alert.accept()
-    
+
     # Чтение X со страницы и рассчет ответа
     answer = calc(int(browser.find_element(By.ID, 'input_value').text))
     # Запись ответа
